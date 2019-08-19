@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Adam vs Evar</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Apple() {
+            this.weight=10;
+            this.decreaseApple=function () {
+                if (this.weight>0) {
+                    this.weight--;
+                }
+            }
+            this.getWeight=function () {
+                if (this.weight>0) {
+                    return this.weight;
+                }
+            };
+            this.isEmty=function () {
+                return false;
+            }
+        };
+
+        function Human() {
+            this.name='';
+            this.gender=true;
+            this.weigh=0;
+            this.setName=function (name) {
+                this.name=name;
+            };
+            this.getName=function () {
+                return this.name;
+            };
+            this.setWeight=function (weight) {
+                this.weight=weight;
+            };
+            this.getWeight=function () {
+                return this.weight;
+            }
+
+            this.setGender =function () {
+                this.gender=!this.gender;
+            };
+
+            this.getGender=function () {
+                return this.gender;
+            };
+            this.say=function (say) {
+                return say;
+            };
+            this.eat=function (a) {
+                if (a.weight>0) {
+                    a.decreaseApple();
+                    this.weight++;
+                }
+            };
+
+            this.isApple =function (weigh) {
+               return apple.weight;
+            };
+
+        }
+
+
+        let apple =new Apple();
+        console.log(apple.weight);
+        console.log(apple.isEmty());
+
+        let adam =new Human();
+        adam.setWeight(60);
+        console.log(adam.getWeight());
+        adam.setName('Adam');
+        console.log(adam.getName());
+        console.log(adam.gender);
+        console.log(adam.say('hello eva'));
+        adam.eat(apple);
+        console.log(adam.getWeight());
+        console.log(apple.getWeight());
+
+
+
+    </script>
+</body>
+</html>
